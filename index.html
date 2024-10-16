@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halila Star</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Halila Star</h1>
@@ -12,12 +12,45 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="service.html">Contact</a></li>
+            <li><a href="service.html">Service</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Welcome to My Home Page</h1>
-    <p></p>
+    <h1>Welcome to Hallibib Hasa Restaurant</h1>
+    <div class="restaurant-description">
+        <h2>Experience the Cultinary Excellence</h2>
+        <p>At <strong>Hallibib Hasa Restaurant</strong>,we redifine fine dining with a perfect blend of exquisite cuisine and elegant ambience.
+            Our five-star establishment promises an unforgettable gastronomic journey for all guest.</p>
 
+        <h2>Gourmet Dining</h2>
+        <p>Indulge in our carefully curated menu, featuring:</p>
+
+        <h2>Exclusive Events</h2>
+        <p>Join us for special culinary events and wine pairing that will elevate your dining experience.</p>
+
+    </div>
+
+    <h2>Reserve Your Table</h2>
+    <div>
+        <label for="Table">Select Table Type:</label>
+        <select name="Table" id="Table">
+            <option value="indoor">Indoor Table</option>
+            <option value="outdoor">Outdoor Table</option>
+            <option value="private">Private Room</option>
+        </select>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="date">Reservation Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Reservation Time:</label>
+        <input type="time" id="time" required>
+
+        <button onclick="makeReservation()">Reserve Now</button>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
