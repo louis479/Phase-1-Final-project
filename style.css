@@ -1,3 +1,11 @@
+/* Global Box Sizing */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in the width and height */
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,18 +16,10 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 100vh; /* Makes sure the body takes up the entire viewport height */
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling for the entire page */
 }
 
-
-
-h1 {
-    color: #ff6600;
-}
-
-h2, h3 {
-    color: #ff6600;
-}
-
+/* Header Styling */
 header {
     background-color: #ffcc00;
     text-align: center;
@@ -27,13 +27,16 @@ header {
 }
 
 header img {
-    width: 100%;
+    max-width: 100%; /* Ensures image doesn't overflow horizontally */
     height: auto;
+    display: block;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -50,23 +53,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Main Content Styling */
 main {
-    max-width: 800px;
+    max-width: 800px; /* Limits the maximum width of the main content */
     margin: 20px auto;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden; /* Prevent horizontal scrolling in the main section */
 }
 
 .section {
     margin-bottom: 20px;
 }
 
-.reservation {
-    margin-top: 20px;
-}
-
+/* Forms and Buttons */
 form {
     display: flex;
     flex-direction: column;
@@ -81,6 +83,7 @@ input, select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; /* Ensure input fields don't cause overflow */
 }
 
 button {
@@ -96,6 +99,7 @@ button:hover {
     background-color: #cc5200;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 10px;
@@ -104,6 +108,27 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    overflow-x: hidden; /* Ensure the footer does not cause overflow */
 }
+
+/* Image Styling */
+img {
+    max-width: 100%; /* Ensures images are responsive and don't overflow */
+    height: auto;
+    display: block;
+}
+
+/* Additional Responsive Fixes */
+@media (max-width: 800px) {
+    main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 5px 0;
+    }
+}
+
 
 
