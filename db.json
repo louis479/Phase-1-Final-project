@@ -1,0 +1,27 @@
+{
+    "reservations": [
+      {
+        "id": 1,
+        "tableType": "indoor",
+        "name": "John Doe",
+        "phone": "123456789",
+        "email": "john@example.com",
+        "date": "2024-10-18",
+        "time": "19:00"
+      }
+    ],
+    "tables": {
+      "indoor": 15,
+      "outdoor": 9,
+      "private": 6
+    },
+    "clients": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "phone": "123456789",
+        "email": "john@example.com"
+      }
+    ]
+  }
+  
