@@ -1,8 +1,9 @@
-/* Global Box Sizing */
+/* Reset default margin and padding */
 * {
     box-sizing: border-box; /* Ensures padding and borders are included in the width and height */
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Body Styling */
@@ -11,12 +12,12 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('./beautiful.webp'); /* Ensure the relative path is correct */
-    background-size: cover;  /* Ensures the image covers the entire page */
+    background-size: cover; /* Ensures the image covers the entire page */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 100vh; /* Makes sure the body takes up the entire viewport height */
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling for the entire page */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
 }
 
 /* Header Styling */
@@ -55,10 +56,10 @@ nav a:hover {
 
 /* Main Content Styling */
 main {
-    max-width: 800px; /* Limits the maximum width of the main content */
+    max-width: 800px; /* Ensures the main content does not exceed a specific width */
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Added slight transparency for better background visibility */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow-x: hidden; /* Prevent horizontal scrolling in the main section */
@@ -111,11 +112,10 @@ footer {
     overflow-x: hidden; /* Ensure the footer does not cause overflow */
 }
 
-/* Image Styling */
+/* Ensure any image added to the content does not overflow */
 img {
-    max-width: 100%; /* Ensures images are responsive and don't overflow */
-    height: auto;
-    display: block;
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
 }
 
 /* Additional Responsive Fixes */
