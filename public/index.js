@@ -18,9 +18,16 @@ document.getElementById('reservation-form').addEventListener('submit', function 
     })
     .then(response => response.json())
     .then(data => {
+        // Display confirmation message
         document.getElementById('confirmation-message').textContent = 'Reservation confirmed!';
+
+        // Append image after reservation is confirmed
+        const img = new Image();
+        img.src = '/beautiful.webp';  // Ensure the path to the image is correct
+        document.body.appendChild(img);  // Adds the image to the body
     })
     .catch(error => console.error('Error:', error));
 });
+
 
 

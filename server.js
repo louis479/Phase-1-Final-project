@@ -9,10 +9,10 @@ const PORT = 3000;
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
-// Serve static files from the public directory
-app.use(express.static('public'));
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Route to get reservations
+// Route to get reservations from db.json
 app.get('/reservations', (req, res) => {
     fs.readFile(path.join(__dirname, 'db.json'), 'utf-8', (err, data) => {
         if (err) {
@@ -22,7 +22,7 @@ app.get('/reservations', (req, res) => {
     });
 });
 
-// Route to add a new reservation
+// Route to add a new reservation to db.json
 app.post('/reservations', (req, res) => {
     const newReservation = req.body;
 
@@ -44,6 +44,8 @@ app.post('/reservations', (req, res) => {
     });
 });
 
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
+
