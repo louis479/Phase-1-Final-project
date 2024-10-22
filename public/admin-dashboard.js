@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch reservations from the server
-    fetch('/reservations')
+    fetch('reservations')
         .then(response => response.json())
         .then(data => {
             const reservationList = document.getElementById('reservation-list');
@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('reservation-list').innerHTML = '<p>Error loading reservations.</p>';
         });
 });
+

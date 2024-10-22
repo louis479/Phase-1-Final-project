@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching reservations:', error);
             document.getElementById('reservation-list').innerHTML = '<p>Error loading reservations.</p>';
         });
-    
+
     // Hardcoded credentials (for demonstration purposes only)
-    const correctUsername = 'admin'; // Set your admin username
-    const correctPassword = 'password123'; // Set your admin password
+    const correctUsername = 'admin';
+    const correctPassword = 'password123';
 
     document.getElementById('login-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
@@ -41,13 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check if the credentials match
         if (username === correctUsername && password === correctPassword) {
-            // Redirect to the admin dashboard or another page
-            window.location.href = 'admin-dashboard.html'; // Change this to your admin page
+            // Redirect to the admin dashboard
+            window.location.href = 'admin-dashboard.html';
         } else {
             // Show error message
             document.getElementById('error-message').innerText = 'Invalid username or password.';
         }
     });
 });
+
 
 
