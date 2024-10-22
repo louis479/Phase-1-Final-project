@@ -1,0 +1,134 @@
+/* Reset default margin and padding */
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in the width and height */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/beautiful.webp'); /* Ensure the relative path is correct */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes sure the body takes up the entire viewport height */
+    color: #333;
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+/* Header Styling */
+header {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100%; /* Ensures image doesn't overflow horizontally */
+    height: auto;
+    display: block;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    max-width: 800px; /* Ensures the main content does not exceed a specific width */
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Added slight transparency for better background visibility */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden; /* Prevent horizontal scrolling in the main section */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+/* Forms and Buttons */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ensure input fields don't cause overflow */
+}
+
+button {
+    padding: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc5200;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow-x: hidden; /* Ensure the footer does not cause overflow */
+}
+
+/* Ensure any image added to the content does not overflow */
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Additional Responsive Fixes */
+@media (max-width: 800px) {
+    main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items on smaller screens */
+        margin: 5px 0;
+    }
+}
+
+
+
